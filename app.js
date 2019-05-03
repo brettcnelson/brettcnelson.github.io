@@ -30,33 +30,55 @@ const apps = [
 		code:'https://github.com/brettcnelson/sudoku-solver'
 	},
 	{
+		name: 'Sort Algorithm Animator',
+		url:'https://sort.brettcnelson.site',
+		code:'https://repl.it/@brettcnelson/sort-algos'
+	},
+	{
 		name: 'Mithril Test',
 		url:'https://thawing-waters-90525.herokuapp.com/',
 		code:'https://github.com/brettcnelson/mithril-test'
 	},
 	{
 		name: 'Minimal Framework',
-		url:null,
 		code:'https://github.com/brettcnelson/MinimalFramework'
 	},
 	{
 		name: 'Codepens',
 		url:'https://codepen.io/brettcnelson',
-		code:null
 	}
 ];
 
 const div = document.getElementById('apps');
-const HTML = apps.map(({ name, url, code }) => {
+const data = {
+	contact: {
+		name:'Brett Nelson',
+		website:anchor('https://brettcnelson.site'),
+		resume:anchor('https://drive.google.com/file/d/1io0leQeU2ls1Ss_rHLrWQeNs5vWa04rp/view'),
+		GitHub:anchor('http://github.com/brettcnelson'),
+		linkedIn:anchor('http://linkedin.com/in/brettcnelson'),
+		email:anchor('mailto:brettcnelson@gmail.com'),
+		twitter:'',
+		'dev.to':'',
+		'now.sh':'<img src=favicon.ico />',
+		'<img src=favicon.ico />':'reaelly'
+	},
+	apps: apps.map(app)
+};
+
+div.innerHTML = `<pre><code>${JSON.stringify(data,null,5)}</code></pre>`;
+
+function app({ name, url, code }) {
 	return {
 		name: `<span style=font-weight:bold>${name}</span>`,
-		url: url ? `<a href=${url} target="_blank">${url}</a>` : null,
-		code: code ? `<a href=${code} target="_blank">${code}</a> ` : null
+		url: anchor(url,'green'),
+		code: anchor(code,'red')
 	};
-});
+}
 
-div.innerHTML = `apps: <pre><code>${JSON.stringify(HTML,null,2)}</code></pre>`;
-
+function anchor(str,style='black',linkTxt) {
+	return str && `<a href=${str} target=_blank style=color:${style}>${linkTxt||str}</a>`
+}
 
 
 
