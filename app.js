@@ -49,7 +49,6 @@ const apps = [
 	}
 ];
 
-const div = document.getElementById('apps');
 const data = {
 	contact: {
 		name:'Brett Nelson',
@@ -58,13 +57,13 @@ const data = {
 		GitHub:anchor('http://github.com/brettcnelson'),
 		linkedIn:anchor('http://linkedin.com/in/brettcnelson'),
 		email:anchor('mailto:brettcnelson@gmail.com'),
-		twitter:'https://twitter.com/_b_r_e_t_t',
-		'dev.to':'https://dev.to/brettcnelson'
+		twitter:anchor('https://twitter.com/_b_r_e_t_t'),
+		'dev.to':anchor('https://dev.to/brettcnelson')
 	},
 	apps: apps.map(app)
 };
 
-div.innerHTML = `<pre><code>${JSON.stringify(data,null,5)}</code></pre>`;
+document.getElementById('apps').innerHTML = `<pre><code>${JSON.stringify(data,null,5)}</code></pre>`;
 
 function app({ name, url, code }) {
 	return {
@@ -75,7 +74,7 @@ function app({ name, url, code }) {
 }
 
 function anchor(str,style='black',linkTxt) {
-	return str && `<a href=${str} target=_blank style=color:${style}>${linkTxt||str}</a>`
+	return str && `<a href=${str} target=_blank style=color:${style}>${linkTxt||str}</a>`;
 }
 
 
