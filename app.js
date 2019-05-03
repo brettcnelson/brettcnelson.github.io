@@ -58,10 +58,8 @@ const data = {
 		GitHub:anchor('http://github.com/brettcnelson'),
 		linkedIn:anchor('http://linkedin.com/in/brettcnelson'),
 		email:anchor('mailto:brettcnelson@gmail.com'),
-		twitter:'',
-		'dev.to':'',
-		'now.sh':'<img src=favicon.ico />',
-		'<img src=favicon.ico />':'reaelly'
+		twitter:'https://twitter.com/_b_r_e_t_t',
+		'dev.to':'https://dev.to/brettcnelson'
 	},
 	apps: apps.map(app)
 };
