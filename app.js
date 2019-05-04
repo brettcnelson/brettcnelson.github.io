@@ -49,9 +49,28 @@ const apps = [
 	}
 ];
 
+const colors = {
+	black: '#000000',
+	red: '#C51E14',
+	green: '#1DC121',
+	yellow: '#C7C329',
+	blue: '#0A2FC4',
+	magenta: '#C839C5',
+	cyan: '#20C5C6',
+	white: '#C7C7C7',
+	lightBlack: '#686868',
+	lightRed: '#FD6F6B',
+	lightGreen: '#67F86F',
+	lightYellow: '#FFFA72',
+	lightBlue: '#6A76FB',
+	lightMagenta: '#FD7CFC',
+	lightCyan: '#68FDFE',
+	lightWhite: '#FFFFFF',
+};
+
 const data = {
 	contact: {
-		name:'Brett Nelson',
+		name:`<span style=color:#f18000 >Brett Nelson</span>`,
 		website:anchor('https://brettcnelson.site'),
 		resume:anchor('https://drive.google.com/file/d/1io0leQeU2ls1Ss_rHLrWQeNs5vWa04rp/view'),
 		GitHub:anchor('http://github.com/brettcnelson'),
@@ -61,27 +80,20 @@ const data = {
 		'dev.to':anchor('https://dev.to/brettcnelson')
 	},
 	apps: apps.map(app)
+	// ,colors: Object.entries(colors).map(([key,val]) => anchor(key,val))
 };
+ 
 
 document.getElementById('apps').innerHTML = `<pre><code>${JSON.stringify(data,null,5)}</code></pre>`;
 
 function app({ name, url, code }) {
 	return {
-		name: `<span style=font-weight:bold>${name}</span>`,
-		url: anchor(url,'#00FFFF'),
-		// #32CD32
-		code: anchor(code,'#ff0000')
+		name: `<strong>${name}</strong>`,
+		url: anchor(url,colors.lightCyan),
+		code: anchor(code,colors.lightRed)
 	};
 }
 
-function anchor(str,style='yellow',linkTxt) {
+function anchor(str,style=colors.lightYellow,linkTxt) {
 	return str && `<a href=${str} target=_blank style=color:${style}>${linkTxt||str}</a>`;
 }
-
-
-
-
-
-
-
-
