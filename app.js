@@ -68,12 +68,13 @@ document.getElementById('apps').innerHTML = `<pre><code>${JSON.stringify(data,nu
 function app({ name, url, code }) {
 	return {
 		name: `<span style=font-weight:bold>${name}</span>`,
-		url: anchor(url,'green'),
-		code: anchor(code,'red')
+		url: anchor(url,'#00FFFF'),
+		// #32CD32
+		code: anchor(code,'#ff0000')
 	};
 }
 
-function anchor(str,style='black',linkTxt) {
+function anchor(str,style='yellow',linkTxt) {
 	return str && `<a href=${str} target=_blank style=color:${style}>${linkTxt||str}</a>`;
 }
 
