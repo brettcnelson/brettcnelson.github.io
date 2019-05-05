@@ -77,6 +77,7 @@ const data = {
 		linkedIn:anchor('http://linkedin.com/in/brettcnelson'),
 		email:anchor('mailto:brettcnelson@gmail.com'),
 		twitter:anchor('https://twitter.com/_b_r_e_t_t'),
+		youtube:anchor('https://www.youtube.com/channel/UC2K4JNW9KtgzQ1bZkdN7X3g'),
 		'dev.to':anchor('https://dev.to/brettcnelson')
 	},
 	apps: apps.map(app)
