@@ -76,7 +76,7 @@ const data = {
 		GitHub:anchor('http://github.com/brettcnelson'),
 		linkedIn:anchor('http://linkedin.com/in/brettcnelson'),
 		email:anchor('mailto:brettcnelson@gmail.com'),
-		twitter:anchor('https://twitter.com/_b_r_e_t_t'),
+		twitter:anchor('https://twitter.com/_brettcnelson'),
 		youtube:anchor('https://www.youtube.com/channel/UC2K4JNW9KtgzQ1bZkdN7X3g'),
 		'dev.to':anchor('https://dev.to/brettcnelson')
 	},
