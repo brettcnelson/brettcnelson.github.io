@@ -1,3 +1,34 @@
 .App {
-  text-align:center;
+  width:100%;
+  height:100%;
+}
+
+.nav {
+  position:fixed;
+  top:0;
+  z-index: 1;
+  width:100%;
+  height:var(--nav-height);
+  background: rgba(0,0,0,.7);
+}
+
+.nav ul {
+  display:flex;
+  list-style:none;
+  width:100%;
+  justify-content: center;
+}
+
+.nav ul li {
+  margin:0 1rem;
+  padding:1rem;
+}
+
+.nav ul li a {
+  text-decoration:none;
+  color:var(--text-one);
+}
+
+.nav ul li a:hover {
+  color:var(--text-two);
 }
