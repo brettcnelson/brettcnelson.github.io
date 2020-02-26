@@ -12,7 +12,7 @@ body {
   --cover-opacity:.7;
   --transition:all 0.5s ease-out;
   --box-shadow:20px 10px 10px var(--background);
-  
+
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -33,5 +33,5 @@ a {
 a:hover {
   transition:var(--transition);
   color:var(--text-two);
-  box-shadow:var(--box-shadow);
+  /* box-shadow:var(--box-shadow); */
 }

@@ -20,6 +20,9 @@
 }
 
 .nav ul li {
-  margin:0 1rem;
-  padding:1rem;
+  padding:1rem 2rem;
+}
+
+.nav ul li a:active {
+  color:green;
 }

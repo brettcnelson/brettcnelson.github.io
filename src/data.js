@@ -1,50 +1,61 @@
-const size = ' fa-2x';
-
-const fonts =  {
-  // details:'fas fa-info-circle'+size,
-  GitHub:'fab fa-github'+size,
-  Site:'fas fa-globe'+size,
-  'Chrome Extension':'fab fa-chrome'+size,
-  // YouTube:'fab fa-youtube'+size,
-  file:'fas fa-file-pdf'+size,
-  email:'fas fa-envelope'+size,
-  linkedin:'fab fa-linkedin'+size,
-  twitter:'fab fa-twitter'+size,
-  // dev:'fab fa-dev'+size
+const icons = (size='') => {
+  if (size) {
+    size = ` fa-${size}x`;
+  }
+  return (
+    {
+      // details:'fas fa-info-circle'+size,
+      GitHub:'fab fa-github'+size,
+      Site:'fas fa-globe'+size,
+      'Chrome Extension':'fab fa-chrome'+size,
+      // YouTube:'fab fa-youtube'+size,
+      code:'fas fa-code'+size,
+      file:'fas fa-file-pdf'+size,
+      email:'fas fa-envelope'+size,
+      linkedin:'fab fa-linkedin'+size,
+      twitter:'fab fa-twitter'+size,
+      dev:'fab fa-dev'+size
+    }
+  );
 }
 
-const icons = [
-  {
-    text: 'Resumé',
-    href: "https://drive.google.com/file/d/1io0leQeU2ls1Ss_rHLrWQeNs5vWa04rp/view",
-    class: fonts.file
-  },
-  {
-    text: 'Email',
-    href: "mailto:brettcnelson@gmail.com",
-    class: fonts.email
-  },
-  {
-    text: 'GitHub',
-    href: "http://github.com/brettcnelson",
-    class: fonts.GitHub
-  },
-  {
-    text: 'LinkedIn',
-    href: "http://linkedin.com/in/brettcnelson",
-    class: fonts.linkedin
-  },
-  {
-    text: 'Twitter',
-    href:'https://twitter.com/_brettcnelson',
-    class: fonts.twitter
-  },
-  // {
-  //   text: 'DEV',
-  //   href: "https://dev.to/brettcnelson",
-  //   class: fonts.dev
-  // }
-];
+const contactIcons = (size) => {
+  const fonts = icons(size);
+  return (
+    [
+      {
+        text: 'Resumé',
+        href: "https://drive.google.com/file/d/1io0leQeU2ls1Ss_rHLrWQeNs5vWa04rp/view",
+        class: fonts.file
+      },
+      {
+        text: 'Email',
+        href: "mailto:brettcnelson@gmail.com",
+        class: fonts.email
+      },
+      {
+        text: 'GitHub',
+        href: "http://github.com/brettcnelson",
+        class: fonts.GitHub
+      },
+      {
+        text: 'LinkedIn',
+        href: "http://linkedin.com/in/brettcnelson",
+        class: fonts.linkedin
+      },
+      {
+        text: 'Twitter',
+        href:'https://twitter.com/_brettcnelson',
+        class: fonts.twitter
+      },
+      // {
+      //   text: 'DEV',
+      //   href: "https://dev.to/brettcnelson",
+      //   class: fonts.dev
+      // }
+    ]
+  );
+}
 
 const portfolio = [
   {
@@ -163,5 +174,4 @@ const portfolio = [
   }
 ];
 
-
-export { fonts, icons, portfolio };
+export { icons, contactIcons, portfolio };
