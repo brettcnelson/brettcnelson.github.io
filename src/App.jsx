@@ -1,25 +1,20 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
+import Nav from './Nav.jsx';
 import Contact from './Contact.jsx';
 import Skills from './Skills.jsx';
 import Portfolio from './Portfolio.jsx';
 
-const sections = [ 'Contact','Skills','Portfolio' ];
-
 export default () => (
   <div className="App">
     <header>
-      <nav className="nav">
-        <ul>
-          {sections.map((s,i) => (
-            <li key={i}><a className="smooth" href={'#'+s}>{s}</a></li>
-          ))}
-        </ul>
-      </nav>
+      <Nav />
     </header>
-    <Contact />
-    <Skills />
-    <Portfolio />
+    <main>
+      <Contact />
+      <Skills />
+      <Portfolio />
+    </main>
     <footer>
       &copy; 2020 ~ Brett Nelson
     </footer>

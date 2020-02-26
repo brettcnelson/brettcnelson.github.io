@@ -2,60 +2,67 @@ const icons = (size='') => {
   if (size) {
     size = ` fa-${size}x`;
   }
-  return (
-    {
-      // details:'fas fa-info-circle'+size,
-      GitHub:'fab fa-github'+size,
-      Site:'fas fa-globe'+size,
-      'Chrome Extension':'fab fa-chrome'+size,
-      // YouTube:'fab fa-youtube'+size,
-      code:'fas fa-code'+size,
-      file:'fas fa-file-pdf'+size,
-      email:'fas fa-envelope'+size,
-      linkedin:'fab fa-linkedin'+size,
-      twitter:'fab fa-twitter'+size,
-      dev:'fab fa-dev'+size
-    }
-  );
+  return {
+    // details:'fas fa-info-circle'+size,
+    // YouTube:'fab fa-youtube'+size,
+    Site:'fas fa-globe'+size,
+    'Chrome Extension':'fab fa-chrome'+size,
+    GitHub:'fab fa-github'+size,
+    linkedin:'fab fa-linkedin'+size,
+    twitter:'fab fa-twitter'+size,
+    // dev:'fab fa-dev'+size
+    file:'fas fa-file-pdf'+size,
+    email:'fas fa-envelope'+size,
+    html:'fab fa-html5'+size,
+    css:'fab fa-css3'+size,
+    js:'fab fa-js-square'+size,
+    react:'fab fa-react'+size,
+    node:'fab fa-node-js'+size
+  }
+}
+
+const techIcons = (size) => {
+  const { html, css, js, react, node} = icons(size);
+  return [ html, css, js, react, node ];
 }
 
 const contactIcons = (size) => {
   const fonts = icons(size);
-  return (
-    [
-      {
-        text: 'Resumé',
-        href: "https://drive.google.com/file/d/1io0leQeU2ls1Ss_rHLrWQeNs5vWa04rp/view",
-        class: fonts.file
-      },
-      {
-        text: 'Email',
-        href: "mailto:brettcnelson@gmail.com",
-        class: fonts.email
-      },
-      {
-        text: 'GitHub',
-        href: "http://github.com/brettcnelson",
-        class: fonts.GitHub
-      },
-      {
-        text: 'LinkedIn',
-        href: "http://linkedin.com/in/brettcnelson",
-        class: fonts.linkedin
-      },
-      {
-        text: 'Twitter',
-        href:'https://twitter.com/_brettcnelson',
-        class: fonts.twitter
-      },
-      // {
-      //   text: 'DEV',
-      //   href: "https://dev.to/brettcnelson",
-      //   class: fonts.dev
-      // }
-    ]
-  );
+  return [
+    {
+      text: 'Resumé',
+      href: "https://drive.google.com/file/d/1io0leQeU2ls1Ss_rHLrWQeNs5vWa04rp/view",
+      class: fonts.file
+    },
+    {
+      text: 'Email',
+      href: "mailto:brettcnelson@gmail.com",
+      class: fonts.email
+    },
+    {
+      text: 'GitHub',
+      href: "http://github.com/brettcnelson",
+      class: fonts.GitHub
+    },
+    {
+      text: 'LinkedIn',
+      href: "http://linkedin.com/in/brettcnelson",
+      class: fonts.linkedin
+    },
+    {
+      text: 'Twitter',
+      href:'https://twitter.com/_brettcnelson',
+      class: fonts.twitter
+    },
+    // {
+    //   text: 'DEV',
+    //   href: "https://dev.to/brettcnelson",
+    //   class: fonts.dev
+    // }
+  ]
 }
+
+const skills = 'HTML, CSS, Sass, Javascript, JQuery, D3, React, Angular, Ionic, Node, Express, MongoDB, Mongoose, PostgreSQL, Knex, SQLite3, Git, Heroku';
 
 const portfolio = [
   {
@@ -74,19 +81,6 @@ const portfolio = [
     ]
   },
   {
-    name: 'Github Repo Search',
-    desc: 'Search GitHub for any user and view a list of repositories sorted by popularity',
-    pic:'images/dsnt.jpg',
-    links: [
-      {name:'GitHub',url:'https://github.com/brettcnelson/fullstackgithub'}
-    ],
-    points: [
-      'Created Knex schemas to manage SQLite database',
-      'Called GitHub API to add data to database using Node and Express',
-      'Managed front-end GET and POST requests using jQuery AJAX calls'
-    ]
-  },
-  {
     name: 'React Fullstack Boilerplate',
     desc: 'A fullstack create-react-app',
     pic:'images/rfsb.png',
@@ -96,6 +90,17 @@ const portfolio = [
     ],
     points: [
       'Built fullstack boilerplate with create-react-app, react-router, an expres proxy API server, working CRUD functionality with MongoDB/mongoose - preconfigured for easy Heroku deployment'
+    ]
+  },
+  {
+    name: 'Minimal Framework',
+    desc: 'DESCRIPTION NEEDED',
+    pic:'images/rfsb.png',
+    links: [
+      {name:'GitHub',url:'https://github.com/brettcnelson/MinimalFramework'}
+    ],
+    points: [
+      'Built lightweight, minimal front-end framework script that diffs the DOM and manages component state'
     ]
   },
   {
@@ -127,6 +132,17 @@ const portfolio = [
     ]
   },
   {
+    name: 'Sort Algorithm Animator',
+    desc: 'DESCRIPTION NEEDED',
+    pic:'images/dsnt.jpg',
+    links: [
+      {name:'Site',url:'https://repl.it/@brettcnelson/sort-algos'}
+    ],
+    points:[
+      'POINTS NEEDED'
+    ]
+  },
+  {
     name: 'Sudoku Solver',
     desc: 'DESCRIPTION NEEDED',
     pic:'images/dsnt.jpg',
@@ -136,28 +152,6 @@ const portfolio = [
     ],
     points: [
       'Wrote React front-end combined with algorithm to recursively solve any Sudoku puzzle'
-    ]
-  },
-  {
-    name: 'Minimal Framework',
-    desc: 'DESCRIPTION NEEDED',
-    pic:'images/rfsb.png',
-    links: [
-      {name:'GitHub',url:'https://github.com/brettcnelson/MinimalFramework'}
-    ],
-    points: [
-      'Built lightweight, minimal front-end framework script that diffs the DOM and manages component state'
-    ]
-  },
-  {
-    name: 'Sort Algorithm Animator',
-    desc: 'DESCRIPTION NEEDED',
-    pic:'images/dsnt.jpg',
-    links: [
-      {name:'Site',url:'https://repl.it/@brettcnelson/sort-algos'}
-    ],
-    points:[
-      'POINTS NEEDED'
     ]
   },
   {
@@ -174,4 +168,4 @@ const portfolio = [
   }
 ];
 
-export { icons, contactIcons, portfolio };
+export { icons, techIcons, contactIcons, portfolio, skills };

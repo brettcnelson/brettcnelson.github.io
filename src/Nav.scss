@@ -1,0 +1,25 @@
+@import 'variables';
+
+.nav {
+  position:fixed;
+  top:0;
+  z-index: 2;
+  width:100%;
+  height:$nav-height;
+  background: rgba(0,0,0,.7);
+  ul {
+    display:flex;
+    list-style:none;
+    width:100%;
+    justify-content:center;
+    li {
+      padding:1rem 2rem;
+      a.active {
+        color:$text-two;
+      }
+      a:hover {
+        color:$text-two;
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Section.css';
+import './Section.scss';
 
 export default (props) => (
   <section id={props.id}>
