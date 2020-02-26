@@ -3,7 +3,8 @@ import React from 'react';
 import Section from './Section.jsx';
 
 export default () => (
-  <Section name="About">
+  <Section id="Skills">
+    <h1>Skills</h1>
     <div>i am about</div>
   </Section>
 );

@@ -7,11 +7,21 @@ section {
   text-align:center;
   width:100%;
   min-height:100vh;
-  padding:var(--nav-height) 0;
+  padding:var(--nav-height) 0 0 0;
+}
+
+section .cover {
+  position:absolute;
+  top:0;
+  width:100%;
+  height:100%;
+  opacity:var(--cover-opacity);
+  background:var(--background);
 }
 
 section .content {
   z-index:1;
+  width:100%;
 }
 
 section h1 {
@@ -22,19 +32,10 @@ section#Contact {
   background:url('https://source.unsplash.com/WugpjxgNIsM/1600x900') no-repeat center center/cover;
 }
 
-section#About {
+section#Skills {
   background:url('https://source.unsplash.com/qjnAnF0jIGk/1600x900') no-repeat center center/cover;
 }
 
 section#Portfolio {
   background:url('https://source.unsplash.com/71CjSSB83Wo/1600x900') no-repeat center center/cover;
-}
-
-section .cover {
-  position:absolute;
-  top:0;
-  width:100%;
-  height:100%;
-  opacity:.5;
-  background:var(--background);
 }

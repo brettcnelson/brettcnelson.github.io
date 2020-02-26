@@ -1,0 +1,37 @@
+.title {
+  box-shadow:15px 15px 10px var(--background),
+            -15px -15px 10px var(--background);
+  display:inline-block;
+  padding:2rem;
+  border-radius:50%;
+}
+
+.sub {
+  font-style:italic;
+}
+
+.con-con {
+  display:inline-block;
+  padding-top:2rem;
+}
+
+.icon-con {
+  display:grid;
+  grid-gap:1rem;
+  text-align:left;
+  padding:1rem;
+}
+
+.icon {
+  color:var(--text-one);
+}
+
+@media screen and (max-width:500px) {
+  .title {
+    padding:.1rem;
+    border-radius:0%;
+  }
+  #Contact h1 {
+    font-size:3rem;
+  }
+}

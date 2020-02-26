@@ -8,7 +8,11 @@ body {
   --text-one:#fff;
   --text-two:skyblue;
   --nav-height:4rem;
-  --background:#333;
+  --background:black;
+  --cover-opacity:.7;
+  --transition:all 0.5s ease-out;
+  --box-shadow:20px 10px 10px var(--background);
+  
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -18,10 +22,16 @@ body {
   /* background:url('/logoOrange-192.png'); */
   color:var(--text-one);
   line-height: 1.6;
-  height:100vh;
+  min-height:100vh;
 }
 
-#root {
-  width:100%;
-  height:100%;
+a {
+  text-decoration:none;
+  color:var(--text-one);
+}
+
+a:hover {
+  transition:var(--transition);
+  color:var(--text-two);
+  box-shadow:var(--box-shadow);
 }
