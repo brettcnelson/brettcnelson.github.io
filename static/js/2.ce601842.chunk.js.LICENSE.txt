@@ -4,6 +4,8 @@ object-assign
 @license MIT
 */
 
+/*! smooth-scroll v16.1.2 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/smooth-scroll */
+
 /** @license React v0.18.0
  * scheduler.production.min.js
  *
