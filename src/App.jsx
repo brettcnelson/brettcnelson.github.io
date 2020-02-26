@@ -20,5 +20,8 @@ export default () => (
     <Contact />
     <Skills />
     <Portfolio />
+    <footer>
+      &copy; 2020 ~ Brett Nelson
+    </footer>
   </div>
 );

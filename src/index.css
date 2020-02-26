@@ -33,5 +33,4 @@ a {
 a:hover {
   transition:var(--transition);
   color:var(--text-two);
-  /* box-shadow:var(--box-shadow); */
 }
